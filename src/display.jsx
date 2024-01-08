@@ -1,12 +1,13 @@
 import Card from './card';
 
-function Display({data}) {
+function Display({data, onClick}) {
 
     
     return (
         <div className='main'>
             {data.map((card, index) => (
                 <Card 
+                onClick={onClick}
                 name = {card.name}
                 attribute = {card.attribute}
                 source = {card.source}

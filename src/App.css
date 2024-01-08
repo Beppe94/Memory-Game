@@ -6,85 +6,107 @@
 .main {
   display: flex;
   gap: 30px;
-  padding: 40px;
+  justify-content: center;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 8px solid var(--border-color);
+  border: 7px solid var(--border-color);
   border-radius: 15px;
-  padding: 15px;
-  width: 350px;
-  height: 550px;
-  background: linear-gradient(11deg, rgba(126,91,19,0.927608543417367) 0%, rgba(180, 123, 37, 0.81) 100%);
+  padding: 10px;
+  width: 300px;
+  height: 450px;
+  background: linear-gradient(11deg, rgba(156, 112, 25, 0.928) 0%, rgba(207, 143, 47, 0.81) 100%);
+  transition: .3s;
 }
 
 .card:hover {
-  scale: 1.2;
+  scale: 1.15;
 }
 
 .cardName {
-  border: 2px solid black;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
+  box-shadow: 0 0 5px 2px black;
+  border-radius: 4px;
+  padding: 2px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  align-items: center;
-  padding: 3px;
 }
 
 .cardName img {
   width: 24px;
-  height: 24px;
+  height: auto;
 }
 
-.attributes {
+.cardRank {
   padding: 5px;
   display: flex;
   justify-content: flex-end;
 }
 
-.attributes img {
-  width: 24px;
-  height: 24px;
+.cardRank img {
+  width: 20px;
+  height: auto;
 }
 
-image {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
+.cardImage {
+  width: 250px;
+  height: 245px;
+  margin: 0 auto;
+  margin-bottom: 8px;
 }
 
-.image img {
-  border: 5px solid var(--border-color);
-  width: 304px;
-  height: 280px;
+.cardImage img {
+  border: 3px solid var(--border-color);
+  display: inline-block;
+  object-fit: contain;
+  width: 100%;
 }
 
-.info {
-  border: 3px solid rgba(175, 121, 49, 0.856);
-  width: 304px;
-  padding: 4px;
-  background: #c5a687;
+.cardInfo {
+  border: 2px solid rgba(231, 128, 31, 0.842);
+  border-bottom: 0;
+  padding: 3px;
+  background-color: rgb(221, 185, 86);
   font-size: 12px;
+  overflow: scroll;
 }
 
-.info p:nth-child(1) {
+.cardInfo::-webkit-scrollbar {
+  display: none;
+}
+
+.cardInfo p:nth-child(1) {
   font-weight: 600;
 }
 
-.strength {
+.border {
+  position: absolute;
+  width: 88%;
   border-top: 2px solid black;
+  bottom: 30px;
+  left: 17px;
+}
+
+.cardStrength {
+  border: 2px solid rgba(231, 128, 31, 0.842);
+  border-top: 0;
+  padding: 1px;
+  background-color: rgb(221, 185, 86);
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-}
-
-.strength:nth-child(3) {
+  gap: 5px;
+  font-size: 12px;
   font-weight: 600;
 }
+
+.cardStrength p {
+  margin-right: 5px;
+}
+
