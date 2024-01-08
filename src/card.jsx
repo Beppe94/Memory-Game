@@ -1,9 +1,10 @@
 import rankIcon from '/src/assets/rank.png'
 
-function Card({name, attribute, rank, source, type, effect, atk, def, onClick}) {
+function Card({card, name, attribute, rank, source, type, effect, atk, def, onClick}) {
 
     return (
-        <div className='card' onClick={onClick} data-key={name}>
+        <div className={card === 'normal' ? 'card' : 'ritual'} onClick={onClick} data-key={name}>
+            {console.log(card)}
             <div className='cardName'>
                 <p>{name}</p>
                 <img src={attribute}/>

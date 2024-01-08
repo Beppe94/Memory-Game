@@ -5,6 +5,11 @@ import mokey from '/src/assets/Monsters/mokey.png'
 import knight from '/src/assets/Monsters/knight.png'
 import serene from '/src/assets/Monsters/serene.png'
 import handcuffs from '/src/assets/Monsters/handcuff.png'
+import lyrilusc from '/src/assets/Monsters/lyrilusc.png'
+import creator from '/src/assets/Monsters/creator.png'
+import ojama from '/src/assets/Monsters/ojama.png'
+import duston from '/src/assets/Monsters/duston.png'
+import retro from '/src/assets/Monsters/retro.png'
 
 
 import light from '/src/assets/Attributes/light.png'
@@ -15,7 +20,8 @@ import earth from '/src/assets/Attributes/earth.png'
 import wind from '/src/assets/Attributes/wind.png'
 
 const data = [
-    {
+    {   
+        cardType: 'normal',
         name: 'Elemental Hero Neos Alius',
         attribute: light,
         rank: 4,
@@ -28,6 +34,7 @@ const data = [
         def: 1300
     },
     {
+        cardType: 'normal',
         name: 'King of Destruction - Xexex',
         attribute: dark,
         rank: 10,
@@ -40,6 +47,7 @@ const data = [
         def: 2500
     },
     {
+        cardType: 'normal',
         name: 'Tenpai Dragon Baidora',
         attribute: fire,
         rank: 3,
@@ -53,6 +61,7 @@ const data = [
         def: 1000
     },,
     {
+        cardType: 'normal',
         name: 'Mokey Mokey Adrift',
         attribute: light,
         rank: 1,
@@ -64,6 +73,7 @@ const data = [
         def: 100
     },
     {
+        cardType: 'normal',
         name: 'Ice Knight',
         attribute: water,
         rank: 4,
@@ -76,7 +86,8 @@ const data = [
         atk: 1300,
         def: 1200
     },
-    {
+    {   
+        cardType: 'normal',
         name: 'Serene Psychic Witch',
         attribute: earth,
         rank: 3,
@@ -89,6 +100,7 @@ const data = [
         def: 1200
     },
     {
+        cardType: 'normal',
         name: 'Handcuffs Dragon',
         attribute: wind,
         rank: 5,
@@ -98,7 +110,71 @@ const data = [
         source: handcuffs,
         atk: 1400,
         def: 1200
-    }   
+    },
+    {
+        cardType: 'normal',
+        name: 'Lyrilusc - Turquoise Warbler',
+        attribute: wind,
+        rank: 1,
+        type: 'Winged Beast',
+        effect: `If you control no monsters, you can Special Summon this card (from your hand). 
+        If this card is Special Summoned from the hand: You can Special Summon 1 "Lyrilusc" monster from your hand or Graveyard. 
+        You can only use this effect of "Lyrilusc - Turquoise Warbler" once per turn.`,
+        source: lyrilusc,
+        atk: 100,
+        def: 100
+    },
+    {
+        cardType: 'normal',
+        name: 'The Creator Incarnate',
+        attribute: light,
+        rank: 4,
+        type: 'Warrior',
+        effect: `You can Tribute this card; Special Summon 1 "The Creator" from your hand.`,
+        source: creator,
+        atk: 1600,
+        def: 1500
+    },
+    {
+        cardType: 'normal',
+        name: 'Ojama Blue',
+        attribute: light,
+        rank: 2,
+        type: 'Beast',
+        effect: `When this card is destroyed by battle and sent to the GY: You can add 2 "Ojama" cards from your Deck to your hand.`,
+        source: ojama,
+        atk: 0,
+        def: 1000
+    },
+    {
+        cardType: 'normal',
+        name: 'Blue Duston',
+        attribute: water,
+        rank: 1,
+        type: 'Fiend',
+        effect: `Cannot be used as a Fusion, Synchro, or Xyz Material for a Summon.
+         While this card is face-up on the field, it cannot be Tributed. 
+         When this card on the field is destroyed: Banish 1 random card from its controller's hand, face-down, until the Standby Phase of the next turn. 
+         You can only control 1 face-up "Blue Duston".`,
+        source: duston,
+        atk: 0,
+        def: 1000
+    },
+    {
+        cardType: 'normal',
+        name: 'Red-Eyes Retro Dragon',
+        attribute: dark,
+        rank: 4,
+        type: 'Dragon',
+        effect: `If a Level 7 or lower "Red-Eyes" monster(s) you control is destroyed by your opponent's attack or card effect and sent to your GY, 
+        while this card is in your hand: You can Special Summon this card in Defense Position, and if you do, 
+        Special Summon as many of those destroyed monsters as possible in the same position they were in when destroyed. 
+        You can Tribute this card; you can Normal Summon 1 "Red-Eyes" monster during your Main Phase this turn in addition to your Normal Summon/Set. 
+        (You can only gain this effect once per turn.)`,
+        source: retro,
+        atk: 1700,
+        def: 1600
+    }
 
 ]
 

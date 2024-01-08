@@ -8,6 +8,7 @@ function Display({data, onClick}) {
             {data.map((card, index) => (
                 <Card 
                 onClick={onClick}
+                card={card.cardType}
                 name = {card.name}
                 attribute = {card.attribute}
                 source = {card.source}
