@@ -7,7 +7,8 @@ import Display from './display';
 function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [cardSet, setCardset] = useState(data)
+  const [cardSet, setCardset] = useState(data);
+  const [checkWin, setCheckWin] = useState([])
 
   function shuffleArray() {
     //console.log(cardSet.length);
@@ -21,13 +22,21 @@ function App() {
 
     const { key } = card.dataset
     
-    console.log(key);
-
+    gameScore(key);
+    
     setTimeout(() => {
       shuffleArray()
     }, 200);
   }
 
+  function gameScore(cardName) {
+    
+    if(!checkWin.includes(cardName)) {
+      setCheckWin(prev => [...prev, cardName])
+    } else {
+      console.log('Card exist');
+    }
+  }
   
   useEffect(() => {
     shuffleArray()

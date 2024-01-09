@@ -15,6 +15,8 @@ import evigishki from '/src/assets/Monsters/evigishki.png'
 import ophiel from '/src/assets/Monsters/ophiel.png'
 import archfiend from '/src/assets/Monsters/archfiend.png'
 import libromancer from '/src/assets/Monsters/libromancer.png'
+import shinobaron from '/src/assets/Monsters/shinobaron.png'
+import dogmatika from '/src/assets/Monsters/dogmatika.png'
 
 
 import light from '/src/assets/Attributes/light.png'
@@ -110,7 +112,8 @@ const data = [
         attribute: wind,
         rank: 5,
         type: 'Dragon',
-        effect: `When this card is destroyed by battle with an attacking monster your opponent controls and is sent to the Graveyard, you can equip this card to that monster. 
+        effect: `When this card is destroyed by battle with an attacking monster your opponent controls and 
+        is sent to the Graveyard, you can equip this card to that monster. 
         The equipped monster loses 1800 ATK. When it is destroyed and this card is sent to the Graveyard, you can Special Summon this card.`,
         source: handcuffs,
         atk: 1400,
@@ -242,12 +245,45 @@ const data = [
         rank: 7,
         type: 'Cyberse / Ritual',
         effect: `You can Ritual Summon this card with a "Libromancer" card. 
-        If this card was Ritual Summoned by using a monster(s) on the field, it cannot be destroyed by battle, also any battle damage it inflicts to your opponent is doubled. 
+        If this card was Ritual Summoned by using a monster(s) on the field, 
+        it cannot be destroyed by battle, also any battle damage it inflicts to your opponent is doubled. 
         This card can make up to 2 attacks on monsters during each Battle Phase. 
         When a monster declares an attack: You can banish 1 "Libromancer" Ritual Monster from your GY; this card gains 200 ATK.`,
         source: libromancer,
         atk: 2800,
         def: 2800
+    },
+    {
+        cardType: 'ritual',
+        name: 'Shinobaron Shade Peacock',
+        attribute: wind,
+        rank: 4,
+        type: 'Winged Beast / Ritual',
+        effect: `You can Ritual Summon this card with "Shinobird's Calling". 
+        This card's name becomes "Shinobaron Peacock" while in the hand or on the field. 
+        You can Tribute this Ritual Summoned card; add 1 Spirit monster and 1 Ritual Spell from your Deck to your hand. 
+        You can only use this effect of "Shinobaron Shade Peacock" once per turn. 
+        Once per turn, during the Standby Phase of the next turn after this card was banished: Special Summon this banished card. 
+        Once per turn, during the End Phase, if this card was Special Summoned this turn: Return this card to the hand.`,
+        source: shinobaron,
+        atk: 2000,
+        def: 1500
+    },
+    {
+        cardType: 'ritual',
+        name: 'White Relic of Dogmatika',
+        attribute: light,
+        rank: 4,
+        type: 'Spellcaster / Ritual',
+        effect: `You can Ritual Summon this card with "Dogmatikamacabre". 
+        If this card is Ritual Summoned: You can target 2 face-up monsters on the field; make 1 of those monsters gain ATK equal to the other monster's ATK. 
+        Level 8 or higher "Dogmatika" monsters you control cannot be destroyed by battle. 
+        If a monster(s) is Special Summoned from your opponent's Extra Deck (except during the Damage Step): 
+        You can look at your opponent's Extra Deck and send 1 monster from it to the GY. 
+        You can only use this effect of "White Relic of Dogmatika" once per turn.`,
+        source: dogmatika,
+        atk: 500,
+        def: 2500
     }
 
 ]
