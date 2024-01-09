@@ -4,7 +4,6 @@ function Card({card, name, attribute, rank, source, type, effect, atk, def, onCl
 
     return (
         <div className={card === 'normal' ? 'card' : 'ritual'} onClick={onClick} data-key={name}>
-            {console.log(card)}
             <div className='cardName'>
                 <p>{name}</p>
                 <img src={attribute}/>
@@ -17,12 +16,12 @@ function Card({card, name, attribute, rank, source, type, effect, atk, def, onCl
             <div className='cardImage'>
                 <img src={source}/>
             </div>
-            <div className='cardInfo'>
+            <div className={card === 'normal' ? 'cardInfo' : 'ritualInfo'}>
                 <p>[ {type} / Effect ]</p>
                 <p>{effect}</p>
             </div>
             <div className='border'></div>
-            <div className='cardStrength'>
+            <div className={card === 'normal' ? 'cardStrength' : 'ritualStrength'}>
                 <p>ATK/ {atk}</p>
                 <p>DEF/ {def}</p>
             </div>

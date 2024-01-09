@@ -10,6 +10,11 @@ import creator from '/src/assets/Monsters/creator.png'
 import ojama from '/src/assets/Monsters/ojama.png'
 import duston from '/src/assets/Monsters/duston.png'
 import retro from '/src/assets/Monsters/retro.png'
+import paladin from '/src/assets/Monsters/paladin.png'
+import evigishki from '/src/assets/Monsters/evigishki.png'
+import ophiel from '/src/assets/Monsters/ophiel.png'
+import archfiend from '/src/assets/Monsters/archfiend.png'
+import libromancer from '/src/assets/Monsters/libromancer.png'
 
 
 import light from '/src/assets/Attributes/light.png'
@@ -174,6 +179,75 @@ const data = [
         source: retro,
         atk: 1700,
         def: 1600
+    },
+    {
+        cardType: 'ritual',
+        name: 'Paladin of Dark Dragon',
+        attribute: dark,
+        rank: 4,
+        type: 'Dragon / Ritual',
+        effect: `You can Ritual Summon this card with "Dark Dragon Ritual". 
+        At the start of the Damage Step, if this card attacks a Defense Position monster: Destroy that monster. 
+        You can Tribute this card; Special Summon 1 "Red-Eyes" monster from your hand or Deck, except "Red-Eyes B. Chick". 
+        You can only use this effect of "Paladin of Dark Dragon" once per turn.`,
+        source: paladin,
+        atk: 1900,
+        def: 1200
+    },
+    {
+        cardType: 'ritual',
+        name: 'Evigishki Gustkraken',
+        attribute: water,
+        rank: 6,
+        type: 'Acqua / Ritual',
+        effect: `You can Ritual Summon this card with any "Gishki" Ritual Spell Card. 
+        When this card is Ritual Summoned: Look at up to 2 random cards in your opponent's hand, then shuffle 1 of them into the Deck.`,
+        source: evigishki,
+        atk: 2400,
+        def: 1000
+    },
+    {
+        cardType: 'ritual',
+        name: 'Megalith Ophiel',
+        attribute: earth,
+        rank: 4,
+        type: 'Dragon / Ritual',
+        effect: `You can Ritual Summon this card with a "Megalith" card. 
+        If this card is Ritual Summoned: You can add 1 "Megalith" monster from your Deck to your hand, except "Megalith Ophiel". 
+        During your Main Phase: You can activate this effect; Ritual Summon 1 Ritual Monster from your hand, by Tributing monsters from your hand or field, 
+        including this card on your field, whose total Levels equal or exceed the Level of the Ritual Monster. 
+        You can only use this effect of "Megalith Ophiel" once per turn.`,
+        source: ophiel,
+        atk: 1600,
+        def: 2500
+    },
+    {
+        cardType: 'ritual',
+        name: 'Archfiend\'s Awakening',
+        attribute: dark,
+        rank: 6,
+        type: 'Fiend / Ritual',
+        effect: `You can Ritual Summon this card with "Contract with the Abyss". 
+        This card's name becomes "Summoned Skull" on the field, but is still treated as an "Archfiend" card. 
+        Cannot be destroyed by battle, except by battle with a Ritual Monster, and cannot be destroyed by monster effects, except those of Ritual Monsters. 
+        If this Ritual Summoned card you control is sent to your GY by an opponent's card: You can Special Summon 1 "Summoned Skull" from your hand, Deck, or GY.`,
+        source: archfiend,
+        atk: 2500,
+        def: 1200
+    },
+    {
+        cardType: 'ritual',
+        name: 'Libromancer Fireburst',
+        attribute: fire,
+        rank: 7,
+        type: 'Cyberse / Ritual',
+        effect: `You can Ritual Summon this card with a "Libromancer" card. 
+        If this card was Ritual Summoned by using a monster(s) on the field, it cannot be destroyed by battle, also any battle damage it inflicts to your opponent is doubled. 
+        This card can make up to 2 attacks on monsters during each Battle Phase. 
+        When a monster declares an attack: You can banish 1 "Libromancer" Ritual Monster from your GY; this card gains 200 ATK.`,
+        source: libromancer,
+        atk: 2800,
+        def: 2800
     }
 
 ]

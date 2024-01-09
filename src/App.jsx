@@ -10,18 +10,25 @@ function App() {
   const [cardSet, setCardset] = useState(data)
 
   function shuffleArray() {
+    //console.log(cardSet.length);
     const shuffled = cardSet.slice().sort(() => Math.random() - .5);
 
     setCardset(shuffled)
   }
 
   function shuffleOnClick(e) {
-    const card = e.target.closest('.card');
-    const {key} = card.dataset
+    const card = e.target.closest('.ritual, .card')
+
+    const { key } = card.dataset
+    
     console.log(key);
-    shuffleArray()
+
+    setTimeout(() => {
+      shuffleArray()
+    }, 200);
   }
 
+  
   useEffect(() => {
     shuffleArray()
   }, [])
