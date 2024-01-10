@@ -1,7 +1,8 @@
 import Card from './card';
 import Loading from './Loading';
+import Nav from './Nav';
 
-function Display({data, onClick, isLoading, startGame}) {
+function Display({data, onClick, isLoading, startGame, currentScore, bestScore}) {
 
     
     return (
@@ -9,6 +10,11 @@ function Display({data, onClick, isLoading, startGame}) {
             {isLoading ? (
                 <Loading onClick={startGame} />
              ) : (
+                <>
+                <Nav 
+                currentScore={currentScore}
+                bestScore={bestScore}
+                />
                 <div className='cardsDisplayed'>
                     {data.map((card, index) => (
                         index < 10 && (
@@ -27,6 +33,7 @@ function Display({data, onClick, isLoading, startGame}) {
                         )
                     ))}
                 </div>
+                </>
             )}
         </div>
     )

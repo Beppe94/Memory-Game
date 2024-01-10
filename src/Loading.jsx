@@ -4,25 +4,32 @@ import alexis from './assets/Characters/alexis.png'
 import joey from './assets/Characters/joey.png'
 import kaiba from './assets/Characters/kaiba.png'
 import yugi from './assets/Characters/yugi.png'
+import title from './assets/title.png'
 
 function Loading({onClick}) {
-    const [charImage, setCharImage] = useState([alexis, joey, kaiba, yugi])
+    const [charImage, setCharImage] = useState([alexis, yugi, kaiba, joey])
 
     useEffect(() => {
         const chars = document.querySelectorAll('.character');
+        const titleImg = document.querySelector('.title');
+    
+        setTimeout(() => {
+            titleImg.style.opacity = '1';
+        }, 500);
 
         chars.forEach((char, index) => {
-            setTimeout(() => {
+            setTimeout(() => {      
                 char.style.opacity = '1';
-            }, 1000 * (index +1));
+            }, 1200 * (index +1));
         })
     })
 
     return (
         <div className='loading'>
+            <img className='title' src={title} alt="yugioh" />
             <div className='characters'>
                 {charImage.map((char, index) => (
-                    <div>
+                    <div className='characterContainer'>
                         <img className='character' key={index} src={char} />
                     </div>
                 ))}

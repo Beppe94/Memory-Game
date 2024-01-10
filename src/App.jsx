@@ -55,11 +55,9 @@ function App() {
 
   return (
     <div>
-      <Nav 
+      <Display 
       currentScore={currentScore}
       bestScore={bestScore}
-      />
-      <Display 
       data={cardSet}
       onClick={shuffleOnClick}
       startGame={startGame}
