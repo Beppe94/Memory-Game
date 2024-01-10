@@ -8,7 +8,7 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [cardSet, setCardset] = useState(data);
-  const [checkWin, setCheckWin] = useState([])
+  const [checkWin, setCheckWin] = useState([]);
 
   function shuffleArray() {
     //console.log(cardSet.length);
@@ -33,8 +33,13 @@ function App() {
     
     if(!checkWin.includes(cardName)) {
       setCheckWin(prev => [...prev, cardName])
+      setCurrentScore(currentScore +1)
     } else {
-      console.log('Card exist');
+      setCurrentScore(0)
+      setCheckWin([])
+      if(bestScore < currentScore) {
+        setBestScore(currentScore)
+      }
     }
   }
   
@@ -44,7 +49,10 @@ function App() {
 
   return (
     <div>
-      <Nav />
+      <Nav 
+      currentScore={currentScore}
+      bestScore={bestScore}
+      />
       <Display 
       data={cardSet}
       onClick={shuffleOnClick}
