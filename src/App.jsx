@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import data from './data';
-import Nav from './nav'
-import Display from './display';
+import Nav from './Nav'
+import Display from './Display';
+import Loading from './Loading';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [cardSet, setCardset] = useState(data);
@@ -47,6 +49,10 @@ function App() {
     shuffleArray()
   }, [])
 
+  function startGame() {
+    setIsLoading(false)
+  }
+
   return (
     <div>
       <Nav 
@@ -56,6 +62,8 @@ function App() {
       <Display 
       data={cardSet}
       onClick={shuffleOnClick}
+      startGame={startGame}
+      isLoading={isLoading}
       />
     </div>
   )

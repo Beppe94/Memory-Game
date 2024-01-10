@@ -17,6 +17,7 @@ import archfiend from '/src/assets/Monsters/archfiend.png'
 import libromancer from '/src/assets/Monsters/libromancer.png'
 import shinobaron from '/src/assets/Monsters/shinobaron.png'
 import dogmatika from '/src/assets/Monsters/dogmatika.png'
+import buerillabaisse from '/src/assets/Monsters/buerillabaisse.png'
 
 
 import light from '/src/assets/Attributes/light.png'
@@ -284,6 +285,23 @@ const data = [
         source: dogmatika,
         atk: 500,
         def: 2500
+    },
+    {
+        cardType: 'ritual',
+        name: 'Buerillabaisse de Nouvelles',
+        attribute: dark,
+        rank: 1,
+        type: 'Beast-Warrior / Ritual',
+        effect: `You can Ritual Summon this card with a "Recipe" card. 
+        If this card is Special Summoned: You can excavate the top 5 cards of your Deck, 
+        and if you do, you can add 1 excavated "Nouvelles" card to your hand, also shuffle the rest into the Deck. 
+        When a card or effect is activated that targets this card on the field, or when this card is targeted for an attack (Quick Effect): 
+        You can Tribute this card and 1 Attack Position monster on either field, and if you do, 
+        Special Summon 1 Level 2 or 3 "Nouvelles" Ritual Monster from your hand or Deck. 
+        You can only use each effect of "Buerillabaisse de Nouvelles" once per turn.`,
+        source: buerillabaisse,
+        atk: 400,
+        def: 1850
     }
 
 ]

@@ -11,6 +11,43 @@
   padding: 20px;
 }
 
+.characters {
+  display: flex;
+}
+
+.characters img {
+  width: 300px;
+  height: auto;
+}
+
+
+.character {
+  transition: 1s;
+  opacity: 0;
+}
+
+.loading {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading button {
+  align-content: center;
+  width: 220px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.cardsDisplayed {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .ritual {
   position: relative;
   display: flex;
