@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import data from './data';
-import Nav from './Nav'
 import Display from './Display';
-import Loading from './Loading';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,46 +9,45 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [cardSet, setCardset] = useState(data);
   const [checkWin, setCheckWin] = useState([]);
+  const [mounted, setMounted] = useState(false);
 
   function shuffleArray() {
-    //console.log(cardSet.length);
     const shuffled = cardSet.slice().sort(() => Math.random() - .5);
 
-    setCardset(shuffled)
+    setCardset(shuffled);
   }
 
   function shuffleOnClick(e) {
-    const card = e.target.closest('.ritual, .card')
+    const card = e.target.closest('.ritual, .card');
 
     const { key } = card.dataset
     
     gameScore(key);
     
     setTimeout(() => {
-      shuffleArray()
-    }, 200);
+      shuffleArray();
+    }, 300);
   }
 
   function gameScore(cardName) {
-    
     if(!checkWin.includes(cardName)) {
-      setCheckWin(prev => [...prev, cardName])
-      setCurrentScore(currentScore +1)
+      setCheckWin(prev => [...prev, cardName]);
+      setCurrentScore(currentScore +1);
     } else {
-      setCurrentScore(0)
-      setCheckWin([])
+      setCurrentScore(0);
+      setCheckWin([]);
       if(bestScore < currentScore) {
-        setBestScore(currentScore)
+        setBestScore(currentScore);
       }
     }
   }
   
   useEffect(() => {
-    shuffleArray()
+    shuffleArray();
   }, [])
 
   function startGame() {
-    setIsLoading(false)
+    setIsLoading(false);
   }
 
   return (

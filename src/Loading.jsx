@@ -26,6 +26,7 @@ function Loading({onClick}) {
 
     return (
         <div className='loading'>
+            <div className='background'></div>
             <img className='title' src={title} alt="yugioh" />
             <div className='characters'>
                 {charImage.map((char, index) => (
