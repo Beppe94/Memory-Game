@@ -14,7 +14,7 @@ function Card({card, name, attribute, rank, source, type, effect, atk, def, onCl
                 ))}
             </div>
             <div className='cardImage'>
-                <img src={source}/>
+                <img src={source} alt={name} loading='lazy'/>
             </div>
             <div className={card === 'normal' ? 'cardInfo' : 'ritualInfo'}>
                 <p>[ {type} / Effect ]</p>

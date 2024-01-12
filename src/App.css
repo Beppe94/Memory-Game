@@ -3,7 +3,14 @@
   --border-color: rgb(151, 143, 143);
 }
 
+.navContainer {
+  width: 100vw;
+  background: none;
+}
+
 .nav {
+  width: 300px;
+  margin: 0 auto;
   border-radius: 10px;
   color: #ffff;
   padding: 15px;
