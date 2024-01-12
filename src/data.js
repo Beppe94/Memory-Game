@@ -18,6 +18,16 @@ import libromancer from '/src/assets/Monsters/libromancer.png'
 import shinobaron from '/src/assets/Monsters/shinobaron.png'
 import dogmatika from '/src/assets/Monsters/dogmatika.png'
 import buerillabaisse from '/src/assets/Monsters/buerillabaisse.png'
+import impcantation from '/src/assets/Monsters/impcantation.png'
+import angel from '/src/assets/Monsters/angel.png'
+import alba from '/src/assets/Monsters/alba.png'
+import sophia from '/src/assets/Monsters/sophia.png'
+import baldrake from '/src/assets/Monsters/baldrake.png'
+import rastaban from '/src/assets/Monsters/rastaban.png'
+import skelesaurus from '/src/assets/Monsters/skelesaurus.png'
+import piper from '/src/assets/Monsters/piper.png'
+import blud from '/src/assets/Monsters/blud.png'
+import pyron from '/src/assets/Monsters/pyron.png'
 
 
 import light from '/src/assets/Attributes/light.png'
@@ -302,8 +312,150 @@ const data = [
         source: buerillabaisse,
         atk: 400,
         def: 1850
+    },
+    {
+        cardType: 'normal',
+        name: 'Impcantation Penciplume',
+        attribute: light,
+        rank: 3,
+        type: 'Psychic',
+        effect: `You can reveal 1 Ritual Monster in your hand; Special Summon both this card from your hand and 1 "Impcantation" monster from your Deck, 
+        except "Impcantation Penciplume". If this card is Special Summoned from the Deck: You can target 1 Ritual Monster in your GY; add it to your hand. 
+        You can only use 1 "Impcantation Penciplume" effect per turn, and only once that turn. 
+        You cannot Special Summon monsters from the Extra Deck.`,
+        source: impcantation,
+        atk: 0,
+        def: 0
+    },
+    {
+        cardType: 'normal',
+        name: 'Cyber Petit Angel',
+        attribute: light,
+        rank: 2,
+        type: 'Fairy',
+        effect: `If this card is Summoned: You can add 1 "Cyber Angel" monster or "Machine Angel Ritual" from your Deck to your hand.
+        You can only use this effect of "Cyber Petit Angel" once per turn.`,
+        source: angel,
+        atk: 300,
+        def: 200
+    },
+    {
+        cardType: 'normal',
+        name: 'The Bystial Alba Los',
+        attribute: light,
+        rank: 12,
+        type: 'Dragon',
+        effect: `Cannot be Normal Summoned/Set. 
+        Must be Special Summoned (from your hand or GY) by Tributing 2 "Bystial" monsters. 
+        While this card, Summoned this way, is in the Monster Zone, negate the effects of all face-up Ritual, 
+        Fusion, Synchro, Xyz, and Link Monsters on the field. 
+        If this face-up card in its owner's control leaves the field because of an opponent's card effect: 
+        You can banish all face-down cards in the Extra Decks, face-up, until your opponent's End Phase.`,
+        source: alba,
+        atk: 3500,
+        def: 3500
+    },
+    {
+        cardType: 'normal',
+        name: 'Sophia, Goddess of Rebirth',
+        attribute: dark,
+        rank: 11,
+        type: 'Fairy',
+        effect: `Cannot be Normal Summoned/Set. 
+        Must be Special Summoned (from your hand) by banishing 1 face-up Ritual, 
+        Fusion, Synchro, and Xyz Monster from anywhere on the field, and cannot be Special Summoned by other ways. 
+        This card's Special Summon cannot be negated. When this card is Special Summoned: 
+        Banish all other cards from both players' hands, fields, and Graveyards. 
+        Cards and effects cannot be activated in response to this effect's activation.`,
+        source: sophia,
+        atk: 3600,
+        def: 3400
+    },
+    {
+        cardType: 'normal',
+        name: 'Bystial Baldrake',
+        attribute: dark,
+        rank: 6,
+        type: 'Dragon',
+        effect: `You can target 1 LIGHT or DARK monster in either GY; banish it, and if you do, 
+        Special Summon this card from your hand. This is a Quick Effect if your opponent controls a monster. 
+        If your opponent Special Summons a Ritual, Fusion, Synchro, Xyz, and/or Link Monster(s) (except during the Damage Step): 
+        You can Tribute 1 other LIGHT or DARK monster, then target 1 of those Special Summoned monsters; banish it. 
+        You can only use each effect of "Bystial Baldrake" once per turn.`,
+        source: baldrake,
+        atk: 2500,
+        def: 2000
+    },
+    {
+        cardType: 'normal',
+        name: 'Drytron Beta Rastaban',
+        attribute: light,
+        rank: 1,
+        type: 'Machine',
+        effect: `Cannot be Normal Summoned/Set. 
+        Must be Special Summoned with the effect of a "Drytron" card. 
+        You can Tribute 1 other "Drytron" monster, or 1 Ritual Monster, from your hand or field; 
+        Special Summon this card from your hand or GY in Defense Position, then you can return 1 of your banished "Drytron" monsters to the GY.
+        You cannot Special Summon monsters, except monsters that cannot be Normal Summoned/Set, 
+        the turn you activate this effect. You can only use this effect of "Drytron Beta Rastaban" once per turn.`,
+        source: rastaban,
+        atk: 2500,
+        def: 2000
+    },
+    {
+        cardType: 'normal',
+        name: 'Skelesaurus',
+        attribute: dark,
+        rank: 4,
+        type: 'Zombie / Gemini',
+        effect: `This card is treated as a Normal Monster while face-up on the field or in the Graveyard. 
+        While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with these effects.
+        This card becomes EARTH Dinosaur-Type. When this card destroys an opponent's monster by battle and sends it to the Graveyard: 
+        You can Special Summon that monster to your field in Defense Position, and if you do, it becomes Zombie-Type.`,
+        source: skelesaurus,
+        atk: 1700,
+        def: 1400
+    },
+    {
+        cardType: 'normal',
+        name: 'Lucky Pied Piper',
+        attribute: wind,
+        rank: 4,
+        type: 'Fairy / Gemini',
+        effect: `This card is treated as a Normal Monster while face-up on the field or in the Graveyard. 
+        While this card is face-up on the field, you can Normal Summon it to have it be treated as an Effect Monster with this effect:
+        When this card destroys an opponent's monster by battle and sends it to the Graveyard, draw 1 card.`,
+        source: piper,
+        atk: 1500,
+        def: 500
+    },
+    {
+        cardType: 'normal',
+        name: 'Il Blud',
+        attribute: dark,
+        rank: 6,
+        type: 'Zombie / Gemini',
+        effect: `This card is treated as a Normal Monster while face-up on the field or in the GY. 
+        While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with this effect.
+        Once per turn: You can Special Summon 1 Zombie monster from your hand or from either GY, 
+        but if this card leaves the field, destroy all Zombie monsters Special Summoned by this effect.`,
+        source: blud,
+        atk: 2100,
+        def: 800
+    },
+    {
+        cardType: 'normal',
+        name: 'King Pyron',
+        attribute: fire,
+        rank: 5,
+        type: 'Pyro / Gemini',
+        effect: `This card is treated as a Normal Monster while face-up on the field or in the Graveyard. 
+        While this card is face-up on the field, you can Normal Summon it to have it be treated as an Effect Monster with this effect:
+        Once per turn, you can inflict 1000 damage to your opponent.`,
+        source: pyron,
+        atk: 1500,
+        def: 500
     }
-
 ]
 
 export default data
