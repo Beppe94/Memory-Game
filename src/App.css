@@ -20,7 +20,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 34px;
-  background-image: url('src/assets/mainBackground2.jpeg');
+  background-image: url('/src/assets/mainBackground2.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,7 +89,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background: url('src/assets/background.gif');
+  background: url('/src/assets/background.gif');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
