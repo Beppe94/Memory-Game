@@ -13,10 +13,11 @@
   display: flex;
   justify-content: start;
   flex-direction: column;
-  background-color: black;
+  background: linear-gradient(30deg, #ff0000 50%, black 40%);
 }
 
 .main {
+  width: 100%;
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -117,8 +118,8 @@
 .cardsDisplayed {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .ritual {
