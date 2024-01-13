@@ -4,6 +4,6 @@
 
 # Odin Project - Memory Game
 
-## Web application built with react and deployed on Netlify
+## A simple memory game with about 30 cards, built with React and deployed on Netlify.
 
 ### Check the [Live Preview](https://yugiohmemorygame.netlify.app/)
